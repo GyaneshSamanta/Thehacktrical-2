@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "thehacktrical-2",
   "version": "1.0.0",
   "description": "Official submission of team SebastianVettel to Thehacktrical-2",
@@ -29,10 +28,7 @@
     "morgan": "^1.10.0",
     "passport": "^0.5.3",
     "passport-google-oauth20": "^2.0.0",
-    "path": "^0.12.7"
-=======
-  "dependencies": {
+    "path": "^0.12.7",
     "chrome-types": "^0.1.152"
->>>>>>> 2298d3d0eb5959f216d011aee3f34a4c53a2e31e
   }
 }
