@@ -1,10 +1,11 @@
 {
-    "name": "Binge Control",
-    "description": "Super User Level Extension",
-    "version": "1.0",
     "manifest_version": 3,
+    "name": "BingeControl",
+    "version": "1.0.0",
+    "description": "Super User level Extension",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
     "action": {
-      "default_popup": "index.html",
-      "default_icon": "architect.png"
+        "default_popup":"index.html",
+        "default_icon":"logo.png"
     }
-  }
+}
