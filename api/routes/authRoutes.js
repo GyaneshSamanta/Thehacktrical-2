@@ -1,9 +1,10 @@
 const express = require("express");
+require('dotenv').config();
 const passport = require("passport");
 const router = express.Router();
 
 router.get("/login", (req, res, next) => {
-  res.render("login");
+  res.render("login",{clientId:process.env.GOOGLE_CLIENT_ID});
 });
 router.get(
   "/login/google",

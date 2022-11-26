@@ -1,12 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title></title>
+    <link rel = 'stylesheet' href="/css/style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content=<%=clientId%>
   </head>
   <body>
-    <a href="/auth/login/google">Login</a>
+    <div class ="hero">
+      <!-- Parent center form element -->
+      <div class ="form-box">
+        <!-- Login Btn -->
+        <div class ="button-box">  
+          <button type="button"  class="toggle-btn" onclick="login()">Login</button>
+        
+          <!-- <div id = "btn"> -->
+            <button type="button"  class="toggle-btn" onclick="register()">Register</button>
+          <!-- </div> -->
+        </div>
+
+        <form id ="login" class ="input-group">
+          <input type = "text" class = "input-field" placeholder="User Id" required>
+
+          <input type = "text" class = "input-field" placeholder="Enter Password" required>
+          
+          <input type = "checkbox" class = "check-box">
+          
+          <span>Remember Password</span>
+          
+          <button type = "submit" class = "submit-btn">Login</button>
+        </form>
+
+        <form id ="register" class ="input-group">
+
+          <input type = "text" class = "input-field" placeholder="User Id" required>
+
+          <input type = "email" class = "input-field" placeholder="Email Id" required>
+
+          <input type = "text" class = "input-field" placeholder="Enter Password" required>
+
+          <input type = "checkbox" class = "check-box">
+          
+          <span>I agree to the terms & conditions</span>
+          
+          <button type = "submit" class = "submit-btn">Register</button>
+
+        </form>
+
+        <!-- <div class="social-icons">
+          <img src ="gp.png">
+        </div> -->
+      
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      </div>
+      
+      <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
+        }
+        function login(){
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0";
+        }
+
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+      </script>
   </body>
 </html>
