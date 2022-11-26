@@ -1,0 +1,33 @@
+{
+  "name": "thehacktrical-2",
+  "version": "1.0.0",
+  "description": "Official submission of team SebastianVettel to Thehacktrical-2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GyaneshSamanta/Thehacktrical-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GyaneshSamanta/Thehacktrical-2/issues"
+  },
+  "homepage": "https://github.com/GyaneshSamanta/Thehacktrical-2#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7"
+  }
+}
