@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/GyaneshSamanta/Thehacktrical-2#readme",
   "dependencies": {
-    "nodemon": "^2.0.20",
+    "chrome-types": "^0.1.152",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -26,9 +26,10 @@
     "express": "^4.18.2",
     "mongoose": "^6.7.3",
     "morgan": "^1.10.0",
+    "node-appwrite": "^8.1.0",
+    "nodemon": "^2.0.20",
     "passport": "^0.5.3",
     "passport-google-oauth20": "^2.0.0",
-    "path": "^0.12.7",
-    "chrome-types": "^0.1.152"
+    "path": "^0.12.7"
   }
 }
