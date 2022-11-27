@@ -36,10 +36,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(morgan("dev"));
-app.get("/home", (req, res, next) => {
+app.get("/", (req, res, next) => {
   console.log("Reached /home endpoint");
   console.log("User is:", req.user);
-  res.render("home", { user: req.user });
+  res.render("home");
 });
 app.use("/auth", authRoutes);
 
