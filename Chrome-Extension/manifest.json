@@ -6,10 +6,8 @@
     "permissions": ["activeTab", "declarativeContent", "storage", "identity",  "identity.email"],
     "action": {
         "default_popup":"index.html",
-        "default_icon":"logo.png", 
-    }
-    {
-        "commands": {
+        "default_icon":"Binge.png",
+    "commands": {
           "_execute_action": {
             "suggested_key": {
               "default": "Ctrl+P",
