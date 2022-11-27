@@ -1,8 +1,8 @@
 <div align="center">
-  <img alt="Thehacktrical2.0" src="assests/cover.png" height="150" width=300 />
+  <img src="Assests/cover.png" height="150" width=300 />
 </div>
 <div align="center">
-  <img alt="BingeControl" src="assests/Binge.png" height="90" />
+  <img src="Assests/Binge.png" height="90" />
 </div>
 
 <br>
