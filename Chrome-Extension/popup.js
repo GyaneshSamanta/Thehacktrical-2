@@ -1,3 +1,14 @@
+
+findAllURL = function changeAllURL(text){
+    var current = window.location.href;
+    console.log("here", text, current)
+    if(current.startsWith(text)){
+      document.documentElement.innerHTML = '';
+      document.documentElement.innerHTML = '<body><h1>BLOCKED</h1></body>';
+      document.documentElement.scrollTop = 0;
+    }
+  }
+findAllURL("https://www.netflix.com");
 window.onload = getElement;
 function getElement(){
   watchBtn = document.getElementById("btn")
@@ -14,6 +25,16 @@ function gettime() {
 chrome.identity.getProfileUserInfo({'accountStatus':'ANY'}, function(info){
     email=info.email;
     console.log(info);
+    fetch('127.0.0.1:3000/getstatus', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ "email": email })
+})
+.then(response => response.json())
+.then(response => console.log(JSON.stringify(response)))
     //document.querySelector('textarea').value=JSON.stringify(info);
 });
 
