@@ -7,7 +7,7 @@ function Gettime() {
 chrome.identity.getProfileUserInfo({'accountStatus':'ANY'}, function(info){
     email=info.email;
     console.log(info);
-    // document.querySelector('textarea').value=JSON.stringify(info);
+    //document.querySelector('textarea').value=JSON.stringify(info);
 });
 
 chrome.action.onClicked.addListener(async(tab)=> {
