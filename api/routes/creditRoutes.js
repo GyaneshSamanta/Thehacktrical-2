@@ -35,7 +35,7 @@ router.post("/start", (req, res, next) => {
   });
 });
 
-router.get("/stop", (req, res, next) => {
+router.post("/stop", (req, res, next) => {
   const time = req.body.time;
   var docId;
   var credits;
@@ -61,7 +61,7 @@ router.get("/stop", (req, res, next) => {
   });
 });
 
-router.get("/score", (req, res, next) => {
+router.post("/score", (req, res, next) => {
   const score = req.body.score;
   console.log("Score is: ", score);
 
