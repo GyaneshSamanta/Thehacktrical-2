@@ -60,6 +60,10 @@ app.get("/", (req, res, next) => {
   res.render("home");
 });
 app.use("/auth", authRoutes);
+app.get('/quiz',(req,res,next)=>{
+  res.render('quiz')
+
+})
 
 app.use("/credits", creditRoutes);
 
