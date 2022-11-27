@@ -3,9 +3,19 @@
     "name": "BingeControl",
     "version": "1.0.0",
     "description": "Super User level Extension",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "identity",  "identity.email"],
     "action": {
         "default_popup":"index.html",
-        "default_icon":"logo.png"
+        "default_icon":"logo.png", 
     }
+    {
+        "commands": {
+          "_execute_action": {
+            "suggested_key": {
+              "default": "Ctrl+P",
+              "mac": "Command+P"
+            }
+          }
+        }
+      }
 }
