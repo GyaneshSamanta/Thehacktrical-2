@@ -35,7 +35,7 @@ const quizData = [
 
 const quiz = document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('quiz')
+const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
@@ -45,13 +45,13 @@ const submitBtn = document.getElementById('submit')
 let currentQuiz = 0 
 let score = 0 
 
-//loadQuiz()
+loadQuiz()
 
-window.onload= function loadQuiz(){
+ function loadQuiz(){
 
   deselectAnswers()
-
-  const currentQuizData = quiz[currentQuiz]
+  console.log(currentQuiz)
+  const currentQuizData = quizData[currentQuiz]
 
   questionEl.innerText = currentQuizData.question
   a_text.innerText = currentQuizData.a 
@@ -65,7 +65,7 @@ function deselectAnswers(){
 }
 
 function getSelected() {
-  let answerEls
+  let answer;
   answerEls.forEach(answerEl => { 
     if(answerEl.checked){
       answer = answerEl.id
