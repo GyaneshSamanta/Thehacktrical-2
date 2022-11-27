@@ -1,8 +1,12 @@
-function Gettime() {
-    const date = new Date();
-    console.warning(date);
-    console.log(date);
-  }
+window.onload = getElement;
+function getElement(){
+  document.getElementById("btn").addEventListener("click", gettime);
+}
+
+function gettime() {
+  const date = new Date();
+  console.log(date);
+}
 
 chrome.identity.getProfileUserInfo({'accountStatus':'ANY'}, function(info){
     email=info.email;
