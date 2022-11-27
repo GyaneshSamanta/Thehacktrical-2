@@ -1,12 +1,13 @@
 function Gettime() {
     const date = new Date();
+    console.warning(date);
     console.log(date);
   }
 
 chrome.identity.getProfileUserInfo({'accountStatus':'ANY'}, function(info){
     email=info.email;
     console.log(info);
-    document.querySelector('textarea').value=JSON.stringify(info);
+    // document.querySelector('textarea').value=JSON.stringify(info);
 });
 
 chrome.action.onClicked.addListener(async(tab)=> {
