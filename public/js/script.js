@@ -87,6 +87,7 @@ submitBtn.addEventListener('click',() => {
     if(currentQuiz < quizData.length){
       loadQuiz()
     } else {
+      sendPost()
       quiz.innerHTML = `
       <h2> You answered ${score}/${quizData.length} questions correctly</h2>
 
@@ -97,3 +98,12 @@ submitBtn.addEventListener('click',() => {
   }
 
 )
+
+function sendPost(){
+  var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://192.168.235.84:3000/credits/score", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    score: score
+}));
+}
