@@ -30,9 +30,7 @@ According to recent data from top streaming service <i> <b> Netflix </b> </i>; 7
 <div align="center">
   <img alt="Preview Images" src="Assests/preview.png" />
 </div>
-<div align="center">
-  <img alt="Preview Images" src="docs/preview2.png" />
-</div>
+
 
 # 💻 Tech Stack
 
@@ -47,11 +45,6 @@ According to recent data from top streaming service <i> <b> Netflix </b> </i>; 7
 
 1. Go to **[`chrome://extensions`](chrome://extensions)** enable developer mode, with developer mode enabled; choose `load unpacked` and navigate to the `chrome extension` folder. 
 2. After the extension is added, click on start watching on start recording the time when you're on [`Netflix.com`](https://netflix.com/in/) 
-
-
-# 📦 Inside the box
-
-
 
 # ⏭️ What's next
 
