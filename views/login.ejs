@@ -2,7 +2,7 @@
   <head>
     <title></title>
     <link rel = 'stylesheet' href="/css/style.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <meta name="google-signin-client_id" content=<%=clientId%>
   </head>
   <body>
@@ -50,7 +50,22 @@
           <img src ="gp.png">
         </div> -->
       
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="g_id_onload"
+     data-client_id="629121447676-n0pl4m2qpkf92m5ibtnerlccfk991763.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="http://localhost:3000/"
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
 
       </div>
       
@@ -77,6 +92,7 @@
           console.log('Image URL: ' + profile.getImageUrl());
           console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         }
+        onSignIn()
       </script>
   </body>
 </html>

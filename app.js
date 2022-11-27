@@ -7,6 +7,7 @@ const passport = require("passport");
 const passportSetup = require("./api/config/passport-setup");
 const morgan = require("morgan");
 const authRoutes = require("./api/routes/authRoutes");
+const  bodyParser  = require("body-parser");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
@@ -31,7 +32,9 @@ app.use(
   })
 );
 
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -39,8 +42,10 @@ app.use(morgan("dev"));
 app.get("/home", (req, res, next) => {
   console.log("Reached /home endpoint");
   console.log("User is:", req.user);
-  res.render("home", { user: req.user });
 });
 app.use("/auth", authRoutes);
-
+app.post("/", (req, res, next) => {
+  console.log(req.body)
+  res.render("home", { user: req.user});
+})
 module.exports = app;

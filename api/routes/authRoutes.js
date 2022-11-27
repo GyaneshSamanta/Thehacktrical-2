@@ -26,4 +26,8 @@ router.get("/logout", (req, res, next) => {
   res.redirect("/login");
 });
 
+router.post("/", (req, res, next) => {
+  console.log(res)
+  res.redirect("/home")
+})
 module.exports = router;
