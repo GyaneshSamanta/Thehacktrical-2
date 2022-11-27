@@ -1,14 +1,17 @@
+chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+    let url = tabs[0].url;
+    findAllURL("https://www.netflix.com", url);
 
-findAllURL = function changeAllURL(text){
-    var current = window.location.href;
+});
+findAllURL = function changeAllURL(text, current){
     console.log("here", text, current)
     if(current.startsWith(text)){
-      document.documentElement.innerHTML = '';
-      document.documentElement.innerHTML = '<body><h1>BLOCKED</h1></body>';
-      document.documentElement.scrollTop = 0;
+      document.documentElement.innerHTML = <iframe src="https://google.com.innerHTML" title="description"></iframe>;
+    //   document.documentElement.innerHTML = '<body><h1>BLOCKED</h1></body>';
+    //   document.documentElement.scrollTop = 0;
+    //   window.location.replace("https://google.com")
     }
   }
-findAllURL("https://www.netflix.com");
 window.onload = getElement;
 function getElement(){
   watchBtn = document.getElementById("btn")
