@@ -2,10 +2,18 @@
     "manifest_version": 3,
     "name": "BingeControl",
     "version": "1.0.0",
-    "description": "Super User level Extension",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "description": "Stay Sharp before you Binge!",
+    "permissions": ["activeTab", "declarativeContent", "storage", "identity",  "identity.email"],
     "action": {
         "default_popup":"index.html",
-        "default_icon":"logo.png"
-    }
+        "default_icon":"Binge.png",
+    "commands": {
+          "_execute_action": {
+            "suggested_key": {
+              "default": "Ctrl+P",
+              "mac": "Command+P"
+            }
+          }
+        }
+      }
 }
