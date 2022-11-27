@@ -1,9 +1,12 @@
 window.onload = getElement;
 function getElement(){
-  document.getElementById("btn").addEventListener("click", gettime);
+  watchBtn = document.getElementById("btn")
+  watchBtn.addEventListener("click", gettime);
 }
-
+var state = false;
 function gettime() {
+  state = !state;
+  watchBtn.innerHTML = state ? "Stop Watching" : "Start Watching"
   const date = new Date();
   console.log(date);
 }
